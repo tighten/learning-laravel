@@ -12,6 +12,10 @@ composer install
 npm install
 ```
 
+## Technologies Used
+- [Laravel 8](https://laravel.com/docs/8.x)
+- [TailwindCSS](https://tailwindcss.com/)
+
 ## Testing
 
 ```bash
