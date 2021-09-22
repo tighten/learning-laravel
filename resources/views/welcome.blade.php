@@ -1,4 +1,4 @@
-@extends('_layouts.base')
+@extends('layouts.base')
 
 @section('content')
     <div class="h-screen flex justify-center items-center">
