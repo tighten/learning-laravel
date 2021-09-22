@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     colors: {
       brand: '#bf201d',
+      brandHover: '#991B1B',
       light: '#f4f2f1',
       lightAccent: '#d67621',
       dark: '#b58b7f',
