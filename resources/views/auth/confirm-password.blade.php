@@ -2,11 +2,11 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                <x-application-logo class="w-28 h-28" />
             </a>
         </x-slot>
 
-        <div class="mb-4 text-sm text-gray-600">
+        <div class="mb-4">
             {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
         </div>
 
@@ -26,7 +26,7 @@
                                 required autocomplete="current-password" />
             </div>
 
-            <div class="flex justify-end mt-4">
+            <div class="flex justify-center mt-4">
                 <x-button>
                     {{ __('Confirm') }}
                 </x-button>
