@@ -1,5 +1,9 @@
 module.exports = {
-  purge: [],
+  purge: [
+    './resources/**/*.blade.php',
+    './resources/**/*.js',
+    './resources/**/*.vue',
+  ],
   darkMode: false,
   theme: {
     colors: {
@@ -14,7 +18,12 @@ module.exports = {
       warning: '#ec7409',
       danger: '#f44336',
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        'display': ['Oswald', 'sans-serif'],
+        'body': ['Lato', 'serif'],
+      },
+    },
   },
   variants: {
     extend: {},
