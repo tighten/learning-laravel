@@ -7,5 +7,35 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: Oswald, sans-serif;
+    @apply font-display;
+}
+
+.button {
+    @apply text-base;
+    @apply text-center;
+    @apply py-4;
+    @apply px-12;
+}
+
+.button-primary {
+    @apply bg-brand;
+    @apply text-light;
+    @apply text-base;
+}
+
+.button-primary:hover {
+    @apply bg-brandHover;
+}
+
+.button-outline {
+    @apply text-brand;
+    @apply border-2;
+    @apply border-brand;
+    @apply text-base;
+}
+
+.button-outline:hover {
+    @apply text-light;
+    @apply bg-brandHover;
+    @apply border-brandHover;
 }
