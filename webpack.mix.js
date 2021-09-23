@@ -13,6 +13,7 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .copy('resources/img', 'public/img')
+    .copy('resources/fonts', 'public/fonts')
     .postCss('resources/css/app.css', 'public/css', [
         require('tailwindcss')('./tailwind.config.js'),
     ])
