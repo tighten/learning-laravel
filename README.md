@@ -15,6 +15,7 @@ npm install
 ## Technologies Used
 - [Laravel 8](https://laravel.com/docs/8.x)
 - [TailwindCSS](https://tailwindcss.com/)
+- [Laravel Breeze Authentication](https://laravel.com/docs/8.x/starter-kits#laravel-breeze)
 
 ## Testing
 
