@@ -1,5 +1,7 @@
 @extends('layouts.base')
 
 @section('content')
-{{ $slot }}
+    <div class="container mx-auto">
+        {{ $slot }}
+    </div>
 @endsection
