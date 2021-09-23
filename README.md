@@ -8,8 +8,11 @@ This is a series designed to show off various features of Laravel in easily cons
 
 Start by using the README badge above to fork this repo locally.
 ```bash
+cp .env.example .env
 composer install
 npm install
+php artisan key:generate
+php artisan migrate
 ```
 
 ## Technologies Used
