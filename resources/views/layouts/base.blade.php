@@ -18,8 +18,6 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>
-    <div class="container mx-auto">
-        @yield('content')
-    </div>
+    @yield('content')
 </body>
 </html>
