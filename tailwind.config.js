@@ -20,6 +20,7 @@ module.exports = {
       success: '#6f8441',
       warning: '#ec7409',
       danger: '#f44336',
+      disabled: '#d2d2d2',
     },
     extend: {
       fontFamily: {

@@ -6,37 +6,49 @@
         <tr>
             <th>#</th>
             @foreach ($headers as $header)
-                <th>{{ $header }}</th>
+                <th align="left">{{ $header }}</th>
             @endforeach
             <th>Actions</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-            @if (count($rows) > 0)
-                @foreach ($rows as $row)
-                    <td>{{ $row->id }}</td>
+        @if (count($rows) > 0)
+            @foreach ($rows as $row)
+                <tr>
+                    <td align="center">{{ $row->id }}</td>
                     @foreach ($fields as $field)
-                        <td>{{ $field }}</td>
+                        <td>{{ $row->$field }}</td>
                     @endforeach
                     <td>
-                        <a href="{{ route($name.'.show', [$param => $row->id]) }}" class="button button-icon bg-info">
-                            <i class="icon-user"></i>
-                        </a>
-                        <a href="{{ route($name.'.edit', [$param => $row->id]) }}" class="button button-icon bg-warning mx-1">
-                            <i class="icon-pencil"></i>
-                        </a>
-                        <a href="{{ route($name.'.destroy', [$param => $row->id]) }}" class="button button-icon bg-danger">
-                            <i class="icon-bin2"></i>
-                        </a>
+                        <div class="flex">
+                            <div>
+                                <a href="{{ route($name.'.show', [$param => $row->id]) }}" class="button button-icon bg-info">
+                                    <i class="icon-user"></i>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="{{ route($name.'.edit', [$param => $row->id]) }}" class="button button-icon bg-warning mx-1">
+                                    <i class="icon-pencil"></i>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="{{ route($name.'.destroy', [$param => $row->id]) }}" class="button button-icon bg-danger">
+                                    <i class="icon-bin2"></i>
+                                </a>
+                            </div>
+                        </div>
                     </td>
-                @endforeach
-            @else
+                </tr>
+            @endforeach
+        @else
+            <tr>
                 <td colspan="{{ count($headers)+2 }}" class="text-center">No data found.</td>
-            @endif
-        </tr>
+            </tr>
+        @endif
         </tbody>
     </table>
 
-    {{ $rows->links() }}
+    <div class="py-6">
+        {{ $rows->links() }}
+    </div>
 </div>
