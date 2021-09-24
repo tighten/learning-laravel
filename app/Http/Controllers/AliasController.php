@@ -10,7 +10,7 @@ class AliasController extends Controller
 {
     public function index()
     {
-        $aliases = Auth::user()->aliases()->paginate(25);
+        $aliases = Auth::user()->aliases()->paginate(10);
 
         return view('resource.index', [
             'name' => 'aliases',
@@ -43,7 +43,7 @@ class AliasController extends Controller
 
     public function show(Alias $alias)
     {
-        //
+        return view('resource.alias.show', ['alias' => $alias]);
     }
 
     public function edit(Alias $alias)

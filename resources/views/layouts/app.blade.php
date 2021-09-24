@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="flex min-h-screen h-full">
-        <div class="flex-auto bg-dark text-light min-w-max">
+        <div class="bg-dark text-light min-w-max">
             @include('layouts.navigation')
         </div>
         <div class="flex-auto p-5">
