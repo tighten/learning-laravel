@@ -15,7 +15,7 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('aliases.index')" :active="request()->routeIs('aliases.index')">
+            <x-responsive-nav-link :href="route('aliases.index')" :active="request()->routeIs('aliases.*')">
                 {{ __('Aliases') }}
             </x-responsive-nav-link>
         </div>

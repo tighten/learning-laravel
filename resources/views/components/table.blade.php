@@ -1,7 +1,7 @@
 @props(['headers', 'fields', 'rows', 'name', 'param'])
 
 <div>
-    <table class="table-auto">
+    <table class="table-auto w-full">
         <thead>
         <tr>
             <th>#</th>
@@ -20,19 +20,19 @@
                         <td>{{ $row->$field }}</td>
                     @endforeach
                     <td>
-                        <div class="flex">
+                        <div class="flex justify-center">
                             <div>
-                                <a href="{{ route($name.'.show', [$param => $row->id]) }}" class="button button-icon bg-info">
+                                <a href="{{ route("{$name}.show", [$param => $row->id]) }}" class="button button-icon bg-info">
                                     <i class="icon-user"></i>
                                 </a>
                             </div>
                             <div>
-                                <a href="{{ route($name.'.edit', [$param => $row->id]) }}" class="button button-icon bg-warning mx-1">
+                                <a href="{{ route("{$name}.edit", [$param => $row->id]) }}" class="button button-icon bg-warning mx-1">
                                     <i class="icon-pencil"></i>
                                 </a>
                             </div>
                             <div>
-                                <a href="{{ route($name.'.destroy', [$param => $row->id]) }}" class="button button-icon bg-danger">
+                                <a href="{{ route("{$name}.destroy", [$param => $row->id]) }}" class="button button-icon bg-danger">
                                     <i class="icon-bin2"></i>
                                 </a>
                             </div>
