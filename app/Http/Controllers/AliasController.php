@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Alias;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -56,8 +57,9 @@ class AliasController extends Controller
         //
     }
 
-    public function destroy(Alias $alias)
+    public function destroy(Alias $alias): RedirectResponse
     {
-        //
+        $alias->delete();
+        return redirect()->back();
     }
 }
