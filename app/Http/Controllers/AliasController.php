@@ -37,11 +37,6 @@ class AliasController extends Controller
         //
     }
 
-    public function store(Request $request)
-    {
-        //
-    }
-
     public function show(Alias $alias)
     {
         return view('resource.alias.show', ['alias' => $alias]);
@@ -50,11 +45,6 @@ class AliasController extends Controller
     public function edit(Alias $alias)
     {
         return view('resource.alias.edit', ['alias' => $alias]);
-    }
-
-    public function update(Request $request, Alias $alias)
-    {
-        //
     }
 
     public function destroy(Alias $alias): RedirectResponse
