@@ -18,11 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
+Route::get('dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-//Route::resource('aliases', AliasController::class)->middleware(['auth']);
 Route::prefix('aliases')->middleware(['auth'])->group(function () {
     Route::get('/', [AliasController::class, 'index'])->name('aliases.index');
     Route::post('/', [AliasController::class, 'store'])->name('aliases.store');
@@ -30,7 +29,8 @@ Route::prefix('aliases')->middleware(['auth'])->group(function () {
     Route::get('{alias}', [AliasController::class, 'show'])->name('aliases.show');
     Route::get('{alias}/edit', [AliasController::class, 'edit'])->name('aliases.edit');
     Route::get('{alias}/delete', [AliasController::class, 'destroy'])->name('aliases.destroy');
+    Route::get('{alias}/burn', [AliasController::class, 'burn'])->name('aliases.burn');
     Route::match(['PUT', 'PATCH'], '{photo}', [AliasController::class, 'update'])->name('aliases.update');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
