@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Alias;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class AliasController extends Controller
@@ -33,12 +34,7 @@ class AliasController extends Controller
 
     public function create()
     {
-        $alias = Alias::factory()->create([
-            'user_id' => Auth::user()->id,
-            'burned' => false,
-        ]);
-
-        return redirect()->route('aliases.show', ['alias' => $alias]);
+        //
     }
 
     public function show(Alias $alias)
