@@ -2225,8 +2225,17 @@ video {
 .mr-2{
 	margin-right: 0.5rem;
 }
+.ml-5{
+	margin-left: 1.25rem;
+}
+.ml-8{
+	margin-left: 2rem;
+}
 .block{
 	display: block;
+}
+.inline{
+	display: inline;
 }
 .flex{
 	display: flex;
@@ -2586,6 +2595,9 @@ video {
 }
 .font-bold{
 	font-weight: 700;
+}
+.uppercase{
+	text-transform: uppercase;
 }
 .leading-5{
 	line-height: 1.25rem;

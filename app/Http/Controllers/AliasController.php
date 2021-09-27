@@ -49,7 +49,7 @@ class AliasController extends Controller
 
     public function edit(Alias $alias)
     {
-        //
+        return view('resource.alias.edit', ['alias' => $alias]);
     }
 
     public function update(Request $request, Alias $alias)
@@ -60,6 +60,13 @@ class AliasController extends Controller
     public function destroy(Alias $alias): RedirectResponse
     {
         $alias->delete();
+        return redirect()->back();
+    }
+
+    public function burn(Alias $alias): RedirectResponse
+    {
+        $alias->burned = 1;
+        $alias->save();
         return redirect()->back();
     }
 }
