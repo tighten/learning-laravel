@@ -4,6 +4,11 @@
 
 This is a series designed to show off various features of Laravel in easily consumable projects. For fun, we decided to create these projects around the theme of Carmen Sandiego, an international thief who has appeared in video games and television shows since 1985.
 
+## Requirements
+- PHP >= 7.3
+- MySQL
+- A [local environment](https://laravel.com/docs/8.x/installation#your-first-laravel-project) for a Laravel project.
+
 ## Installation
 
 Start by using the README badge above to fork this repo locally.
