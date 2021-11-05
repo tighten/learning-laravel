@@ -12,7 +12,7 @@ class AliasController extends Controller
     {
         $aliases = Auth::user()->aliases()->paginate(10);
 
-        return view('resource.index', [
+        return view('resource.alias.index', [
             'name' => 'aliases',
             'param' => 'alias',
             'headers' => [
