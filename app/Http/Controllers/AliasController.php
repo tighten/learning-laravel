@@ -54,6 +54,7 @@ class AliasController extends Controller
     public function destroy(Alias $alias): RedirectResponse
     {
         $alias->delete();
+
         return redirect()->back();
     }
 
@@ -61,6 +62,7 @@ class AliasController extends Controller
     {
         $alias->burned = 1;
         $alias->save();
+
         return redirect()->back();
     }
 }

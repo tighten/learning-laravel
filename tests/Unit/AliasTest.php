@@ -27,27 +27,27 @@ class AliasTest extends TestCase
             ->create();
         $alias = $user->aliases->first();
 
-        $this->actingAs($user)->get('/aliases/' . $alias->id . '/burn');
+        $this->actingAs($user)->get('/aliases/'.$alias->id.'/burn');
         $this->assertDatabaseHas('aliases', [
-                'id' => $alias->id,
-                'user_id' => $alias->user_id,
-                'name' => $alias->name,
-                'email' => $alias->email,
-                'phone' => $alias->phone,
-                'address' => $alias->address,
-                'cc_type' => $alias->cc_type,
-                'cc_number' => $alias->cc_number,
-                'cc_expiration' => $alias->cc_expiration,
-                'company' => $alias->company,
-                'job_title' => $alias->job_title,
-                'company_email' => $alias->company_email,
-                'username' => $alias->username,
-                'password' => $alias->password,
-                'ip_address' => $alias->ip_address,
-                'mac_address' => $alias->mac_address,
-                'profile' => $alias->profile,
-                'burned' => 1,
-            ]);
+            'id' => $alias->id,
+            'user_id' => $alias->user_id,
+            'name' => $alias->name,
+            'email' => $alias->email,
+            'phone' => $alias->phone,
+            'address' => $alias->address,
+            'cc_type' => $alias->cc_type,
+            'cc_number' => $alias->cc_number,
+            'cc_expiration' => $alias->cc_expiration,
+            'company' => $alias->company,
+            'job_title' => $alias->job_title,
+            'company_email' => $alias->company_email,
+            'username' => $alias->username,
+            'password' => $alias->password,
+            'ip_address' => $alias->ip_address,
+            'mac_address' => $alias->mac_address,
+            'profile' => $alias->profile,
+            'burned' => 1,
+        ]);
     }
 
     /** @test */
