@@ -19,6 +19,11 @@ cp .env.example .env
 composer install
 npm install
 php artisan key:generate
+```
+
+create local database (`laravel` by default)
+
+```bash
 php artisan migrate
 ```
 
