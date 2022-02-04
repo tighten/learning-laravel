@@ -5,7 +5,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAliasesTable extends Migration
+return new class extends Migration
 {
     public function up()
     {
@@ -36,4 +36,4 @@ class CreateAliasesTable extends Migration
     {
         Schema::dropIfExists('aliases');
     }
-}
+};
