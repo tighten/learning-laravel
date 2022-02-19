@@ -31,4 +31,4 @@ Route::prefix('aliases')->middleware(['auth'])->group(function () {
     Route::get('{alias}/burn', [AliasController::class, 'burn'])->name('aliases.burn');
 });
 
-require __DIR__ . '/auth.php';
+require __DIR__.'/auth.php';

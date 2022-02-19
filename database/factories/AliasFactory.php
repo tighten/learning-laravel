@@ -8,8 +8,6 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 
 class AliasFactory extends Factory
 {
-    protected $model = Alias::class;
-
     public function definition(): array
     {
         return [
